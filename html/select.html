@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>select</title>
+	<style>
+		*{margin:0;paddint:0;}
+	</style>
+	<link rel="stylesheet" href="../src/css/select.css">
+</head>
+<body>
+	<div class="select-radio">
+		<div class="radio-item">
+			<span class="icon"></span>
+			<span class="text" value="heh">hehe</span>
+		</div>
+		<div class="radio-item checked">
+			<span class="icon"></span>
+			<span class="text" value="heh">hehe</span>
+		</div>
+		<div class="radio-item disable">
+			<span class="icon"></span>
+			<span class="text" value="heh">hehe</span>
+		</div>
+		<div class="radio-item must">
+			<span class="icon"></span>
+		<span class="text" value="heh">hehe</span>
+		</div>
+	</div>
+	<div class="select-checkbox">
+		<div class="checkbox-item">
+			<span class="icon"></span>
+			<span class="text" value="heh">hehe</span>
+		</div>
+		<div class="checkbox-item checked">
+			<span class="icon"></span>
+			<span class="text" value="heh">hehe</span>
+		</div>
+		<div class="checkbox-item disable">
+			<span class="icon"></span>
+			<span class="text" value="heh">hehe</span>
+		</div>
+		<div class="checkbox-item must">
+			<span class="icon"></span>
+			<span class="text" value="heh">hehe</span>
+		</div>
+		
+	</div>
+	<div class="select-radio block">
+		<div class="radio-item">
+			<span class="text" value="heh">hehe</span>
+		</div>
+		<div class="radio-item checked">
+			<span class="text" value="heh">hehe</span>
+		</div>
+		<div class="radio-item disable">
+			<span class="text" value="heh">hehe</span>
+		</div>
+		<div class="radio-item must">
+			<span class="text" value="heh">hehe</span>
+		</div>
+	</div>
+
+	<div class="select-checkbox block">
+		<div class="checkbox-item">
+			<span class="text" value="heh">hehe</span>
+		</div>
+		<div class="checkbox-item checked">
+			<span class="text" value="heh">hehe</span>
+		</div>
+		<div class="checkbox-item disable">
+			<span class="text" value="heh">hehe</span>
+		</div>
+		<div class="checkbox-item must">
+			<span class="text" value="heh">hehe</span>
+		</div>
+		
+	</div>
+	<div id="demo"></div>
+	<button id="text">Text</button>
+	<div id="demo_check"></div>
+	<button id="text_check">Text</button>
+</body>
+<script type="text/javascript" src="../lib/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="../src/js/select.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var opts = {
+			data:[{"text":"item-1","value":1},
+			{"text":"item-2","value":2},
+			{"text":"item-3","value":3,"disable":true},
+			{"text":"item-4","value":4}],
+			showVal:'text',
+			realVal:'value',
+			block:true
+		}
+		var radio_normal = $('#demo').UISelect(opts);
+		$("#text").click(function(){
+			console.log(radio_normal.getSelectText());
+		});
+		var checkbox = $("#demo_check").UISelect({
+			type:"checkbox",
+			data:[{"text":"item-1","value":1},
+			{"text":"item-2","value":2,"default":true},
+			{"text":"item-3","value":3},
+			{"text":"item-4","value":4,"disable":true}],
+			showVal:'text',
+			realVal:'value'
+		});
+		$("#text_check").click(function(){
+			console.log(checkbox.getSelectValue());
+			checkbox.setSelected(["1","3"]);
+		});
+	});
+</script>
+</html>
