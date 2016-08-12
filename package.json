@@ -1,0 +1,36 @@
+{
+  "name": "jslib",
+  "version": "0.0.1",
+  "description": "JavaScript自用库总结整合",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BingKui/JavaScript-lib.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "JS"
+  ],
+  "author": "康兵奎",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BingKui/JavaScript-lib/issues"
+  },
+  "homepage": "https://github.com/BingKui/JavaScript-lib#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-csslint": "^0.3.1",
+    "gulp-jshint": "^2.0.1",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "jshint": "^2.9.2"
+  }
+}
