@@ -76,6 +76,11 @@
 	border-color: #ccc;
 	cursor: not-allowed;
 }
+.block .checkbox-item.disable{
+	border-color:#ccc; 
+	background-color: #ededed;
+	cursor: not-allowed;
+}
 .block .radio-item.must{
 	border-color: #44abe5;
 	background-color: #DBECF9;
